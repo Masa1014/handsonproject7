@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Individual Case Project 7</title>
+</head>
+<script>
+
+  function hoge() {
+
+    var date1 = document.getElementById('date1').value;
+    var date2 = document.getElementById('date2').value;
+
+    date1 = new Date(date1);
+    date2 = new Date(date2);
+
+    var result = (date1 - date2) / 86400000;
+
+    var obj = document.getElementsByClassName("badge")[0];
+
+    obj.textContent = result;
+
+  }
+
+</script>
+
+<body>
+  <div class="main">
+
+    <h2><span class="badge badge-primary">Date calculator</span></h2>
+
+    <form>
+      <div class="form-group">
+        <label class="bmd-label-floating">Date 1</label>
+        <input type="date" id="date1">
+      </div>
+      <div class="form-group">
+        <label class="bmd-label-floating">Date 2</label>
+        <input type="date" id="date2">
+      </div>
+    </form>
+
+    <p> Click the button below </p>
+    <button type="button" onclick="hoge()" class="btn btn-raised btn-primary">
+
+    </button>
+
+  </div>
+</body>
+</html>
